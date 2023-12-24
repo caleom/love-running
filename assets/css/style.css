@@ -113,6 +113,18 @@ padding-left: 10px;
     color:#ffffff;
 }
 
+/* Reasons section */
+#reasons{
+    width:90%;
+    margin: 20px auto;
+}
+
+#reasons > h2{
+    font-size: 280%;
+    margin-bottom: 20px;
+}
+
+
 /* footer */
 #social-networks{
     text-align: center;
