@@ -25,6 +25,10 @@ h1, h2, h3 {
     color: #252525;
 }
 
+.hidden-heading{
+    display: none;
+}
+
 /* header */
 Header {
     background-color: #ffffff;
@@ -122,6 +126,59 @@ padding-left: 10px;
 #reasons > h2{
     font-size: 280%;
     margin-bottom: 20px;
+    text-align: center;
+}
+
+#reasons p {
+    padding:0 20px;
+}
+
+#reasons div {
+    margin-bottom: 20px;
+    line-height: 20px;
+}
+
+#reasons hr {
+    border-top: 1px solid #3a3a3a;
+    margin: 5px 0;
+}
+
+#circle-cover-background{
+    background:url("../images/reasons-image.webp") no-repeat top center / cover;
+    height: 90vw;
+    width:90vw;
+    margin-bottom: 20px;
+    border-radius: 50%;
+    max-width: 300px;
+    max-height: 300px;
+}
+
+#benefits-image{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Times section */
+
+#times{
+    background: url(../images/dublin-city.webp) no-repeat center / cover;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+#times > div {
+    color: #fafafa;
+    background-color: rgba(0, 0, 0, .6);
+    padding:15px;
+    flex-basis: 200px;
+    flex-grow: 1;
+    border: 2px solid white;
+}
+
+#times h3 {
+    color: #fafafa;
 }
 
 
@@ -180,11 +237,57 @@ padding-left: 10px;
         right:50px;
 
     }
+
+    /* Reasons section */
+    #benefits-physical,
+    #benefits-mental{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    #benefits-physical > div,
+    #benefits-mental > div{
+        width: 75%;
+    }
+
+    #benefits-mental > div{
+        text-align: end;
+        align-self: flex-end;
+    }
 }
 
 /* Media query: tablets and larger (992px) */
 @media screen and (min-width:992px) {
     #menu a:hover {
         border-bottom: 1px solid #3a3a3a;
+    }
+}
+
+@media screen and (min-width: 1200px) {    
+    /* Reasons section */
+    #benefits {
+        display: flex;
+        flex-direction: row;
+    }
+
+    #benefits > div {
+        flex: 1;
+    }
+
+    #benefits-image {
+        order: 0
+    }
+
+    #benefits-mental {
+        order: 1;
+    }
+
+    #benefits-mental > div {
+        align-self: flex-start;
+    }
+
+    #benefits-physical > div {
+        align-self: flex-end;
     }
 }
